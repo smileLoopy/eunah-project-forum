@@ -20,7 +20,6 @@ class ArticleControllerTest {
         this.mvc = mvc;
     }
 
-    @Disabled("under implementation")
     @DisplayName("[view][GET] post list (forum) page - normal call")
     @Test
     public void givenNothing_whenRequestingPostsView_thenReturnsPostsView() throws Exception {
@@ -29,7 +28,7 @@ class ArticleControllerTest {
         // When & Then
         mvc.perform(get("/posts"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.TEXT_HTML))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("posts/index"))
                 .andExpect(model().attributeExists("posts"));
     }
