@@ -33,7 +33,6 @@ class ArticleControllerTest {
                 .andExpect(model().attributeExists("posts"));
     }
 
-    @Disabled("under implementation")
     @DisplayName("[view][GET] post detail page - normal call")
     @Test
     public void givenNothing_whenRequestingPostView_thenReturnsPostView() throws Exception {
