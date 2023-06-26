@@ -1,3 +1,9 @@
+-- Test Account
+-- TODO: Even if it's just for test, password is exposed. So need to be consider will hide it or not later on.
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+    ('eunah', 'eunah1234', 'Eunah', 'eunah@mail.com', 'I am Eunah.', now(), 'eunah', now(), 'eunah')
+;
+
 -- 123 post
 insert into post (title, content, hashtag, created_by, modified_by, created_at, modified_at) values
                                                                                                     ('Quisque ut erat.', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
