@@ -16,7 +16,7 @@ import java.util.List;
 * */
 @RequestMapping("/posts")
 @Controller
-public class ArticleController {
+public class PostController {
 
     @GetMapping
     public String posts(ModelMap map){
